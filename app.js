@@ -1,3 +1,4 @@
+require('dotenv').config();
 const axios = require('axios');
 const express = require('express');
 const etsyjs = require('etsy-js');
@@ -28,7 +29,7 @@ app.get('/', async (req, res) => {
     response_type=code
     &redirect_uri=https://etsy-test.herokuapp.com/authorise
     &scope=transactions_r%20transactions_w
-    &client_id=hdqn6kwt4c8n5aps1rsy0a0p
+    &client_id=${process.env.CLIENT_ID}
     &state=superstate
     &code_challenge=DSWlW2Abh-cf8CeLL8-g3hQ2WQyYdKyiu83u_s7nRhI
     &code_challenge_method=S256`);

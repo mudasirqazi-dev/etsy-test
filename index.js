@@ -9,8 +9,8 @@ app.use(cookieParser('secEtsy'));
 app.use(session());
 
 const client = etsyjs.client({
-    key: 'hdqn6kwt4c8n5aps1rsy0a0p',
-    secret: 'vtt0qazg96',
+    key: process.env.CLIENT_ID,
+    secret: process.env.SECRET,
     callbackURL: 'http://localhost:3000/authorise'
 });
 
