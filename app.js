@@ -26,7 +26,7 @@ app.get('/', async (req, res) => {
     //     &code_challenge_method=S256`);
     res.redirect(`https://www.etsy.com/oauth/connect?
     response_type=code
-    &redirect_uri=https://tolocalhost.com:3000/authorise
+    &redirect_uri=https://etsy-test.herokuapp.com/authorise
     &scope=transactions_r%20transactions_w
     &client_id=hdqn6kwt4c8n5aps1rsy0a0p
     &state=superstate
